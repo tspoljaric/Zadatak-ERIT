@@ -4,7 +4,7 @@
 .sidebar {
   @include flex-column;
   @include width-height;
-  padding: 40px;
+  padding: 56px;
   background: $white;
 
   .logo {
