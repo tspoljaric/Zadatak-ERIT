@@ -1,0 +1,163 @@
+<div class="body">
+
+  <app-sidebar></app-sidebar>
+
+  <div class="main">
+    <div class="nav">
+      <h1>Dobrodošla, Ana!</h1>
+
+      <div class="wrap-right">
+        <div class="icons">
+          <div class="icon-wrapper">
+            <div class="indicator"></div>
+            <span class="material-symbols-outlined">chat_bubble</span>
+          </div>
+          <div class="icon-wrapper">
+            <div class="indicator"></div>
+            <span class="material-symbols-outlined">notifications</span>
+          </div>
+        </div>
+        <div class="avatar">
+          <img src="images/ana.jpg">
+          <div class="wrap-user">
+            <p class="bold">Ana Kovačević</p>
+            <p class="black-50">Korisnik</p>
+          </div>
+          <span class="material-symbols-outlined">keyboard_arrow_down</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap-main">
+      <div class="wrap-row">
+        <div class="row">
+          <div class="wrap-warning">
+            <div class="warning">
+              <p>Ovlaštenje ističe za <b>3 dana</b></p>
+            </div>
+            <div class="more-btn">
+              <button mat-button color="primary" href="#">
+                Pregled svih upozorenja
+                <span class="material-symbols-outlined">arrow_right_alt </span>
+              </button>
+            </div>
+          </div>
+
+          <mat-card class="wrap-active">
+            <h1>15</h1>
+            <div class="row">
+              <span></span>
+              <p class="black-50">Aktivni kontrolori</p>
+            </div>
+          </mat-card>
+        </div>
+
+        <div class="row">
+          <mat-card>
+            <h2>Nadolazeće smjene</h2>
+            <div class="shift">
+              <p class="black-50">3.svibnja</p>
+              <span> </span>
+              <p>07:00 - 15:00 h</p>
+            </div>
+            <div class="shift">
+              <p class="black-50">4.svibnja</p>
+              <span class="purple"> </span>
+              <p>15:00 - 23:00 h</p>
+            </div>
+            <div class="shift">
+              <p class="black-50">6.svibnja</p>
+              <span class="purple"> </span>
+              <p>15:00 - 23:00 h</p>
+            </div>
+          </mat-card>
+
+          <mat-card class="switch">
+            <div class="wrap-title">
+              <div class="icon">
+                <span class="material-symbols-outlined">shuffle</span>
+              </div>
+              <h2>Zahtjevi za zamjenu</h2>
+            </div>
+
+            <div class="row">
+              <p class="black-50">Status</p>
+              <p class="green">Odobreno</p>
+            </div>
+
+            <div class="row">
+              <p class="black-50">Datum</p>
+              <p>5. lipnja 2024.</p>
+            </div>
+
+            <div class="row">
+              <p class="black-50">Vrijeme</p>
+              <p>08:00 - 16:00</p>
+            </div>
+
+            <div class="row">
+              <p class="black-50">Radna pozicija</p>
+              <p>Kontrolor</p>
+            </div>
+          </mat-card>
+        </div>
+
+        <mat-card class="wrap-hours">
+          <div class="wrap-title">
+            <h2>Odrađeni sati</h2>
+            <div class="hour">
+              <p class="black-50">H</p>
+              <p class="bold">160 / 640</p>
+            </div>
+          </div>
+          <div class="wrap-graph">
+            <div class="column">
+              <div *ngFor="let hour of hours">
+                {{ hour.time }}
+              </div>
+            </div>
+            <div class="graph">
+              <div class="empty col-1"></div>
+              <div class="empty col-2"></div>
+              <div class="empty col-3"></div>
+              <div class="empty col-4"></div>
+              <div class="filled col-5"></div>
+              <div class="filled col-6"></div>
+            </div>
+          </div>
+          <div class="wrap-months">
+            <div *ngFor="let month of months">
+              {{ month.month }}
+            </div>
+          </div>
+        </mat-card>
+      </div>
+
+      <mat-card class="wrap-messages">
+        <div class="wrap-title">
+          <div class="title">
+            <span>7</span>
+            <p>Poruke</p>
+          </div>
+          <div class="see-more">
+            <p>Pogledaj sve</p>
+            <span class="material-symbols-outlined">arrow_right_alt </span>
+          </div>
+        </div>
+        <div class="message" *ngFor="let message of messages">
+          <div class="wrap-avatar">
+            <img [src]="message.avatar" alt="Avatar">
+            <div class="message">
+              <div class="bold">{{ message.title }}</div>
+              <div class="black-50">{{ message.content }}</div>
+            </div>
+          </div>
+          <div class="pin">
+            <span class="material-symbols-outlined material-symbols-filled pinned">keep</span>
+            <div class="black-50">{{ message.time }}</div>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>

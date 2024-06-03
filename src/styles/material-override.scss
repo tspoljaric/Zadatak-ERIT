@@ -1,0 +1,72 @@
+@import 'variables.scss';
+@import '../styles.scss';
+
+.mdc-button--raised {
+  @include flex-center;
+  width: fit-content;
+  color: $black !important;
+  background-color: $green-60 !important;
+  padding: 8px 24px !important;
+}
+
+
+.mat-mdc-button .mdc-button__label {
+  display: flex !important;
+  align-items: center !important;
+  color: $black;
+  gap: 16px;
+}
+
+.mdc-button__label {
+  display: flex !important;
+  align-items: center !important;
+  gap: 24px;
+}
+
+.mat-mdc-text-field-wrapper {
+  background-color: $white !important;
+  border: 1px solid $green-40 !important;
+  border-bottom: 1px solid $green-40 !important;
+}
+
+.mat-mdc-text-field-wrapper:hover {
+  background-color: $green-20 !important;
+  border: 1px solid $green-40 !important;
+}
+
+.mdc-text-field--filled .mdc-line-ripple::after {
+  border-color: $green-40 !important;
+}
+
+.mdc-text-field--filled .mdc-line-ripple::before {
+  border-color: $green-40 !important;
+}
+
+mat-label {
+  color: $green;
+}
+
+.mat-mdc-header-row .mdc-data-table__header-row .cdk-header-row {
+  padding: 0px 56px !important;
+}
+
+.mat-mdc-row .mdc-data-table__row .cdk-row {
+  padding: 0px 56px !important;
+
+}
+
+.mat-mdc-form-field-subscript-wrapper {
+  height: 0px !important;
+}
+
+mat-card {
+  display: flex;
+  flex-direction: column;
+  background-color: $white !important;
+  border: 1px solid $green-40 !important;
+  border-radius: 8px;
+  padding: 24px 40px;
+  gap: 24px;
+  height: fit-content;
+  width: fit-content;
+}

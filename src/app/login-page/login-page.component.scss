@@ -1,0 +1,31 @@
+@import '../../styles/variables.scss';
+@import '../../styles.scss';
+
+.body {
+  @include flex-center;
+  background-image: url('../../../public/images/airport.png');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  
+  .wrap {
+    @include width-height;
+    @include flex-center;
+    padding: 88px 56px;
+
+    .wrapper {
+      @include flex-center;
+      flex-direction: column;
+      margin-top: 56px;
+      gap: 32px;
+      mat-form-field {
+        width: 400px;
+      }
+      button {
+        width: 400px;
+        background-color: blue;
+      }
+    }
+  }
+}

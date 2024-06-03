@@ -1,0 +1,56 @@
+@import '../../styles/variables.scss';
+@import '../../styles.scss';
+
+.sidebar {
+  @include flex-column;
+  @include width-height;
+  padding: 40px;
+  background: $white;
+
+  .logo {
+    width: 140px;
+    height: 45px;
+    margin-top: 32px;
+    margin-left: 88px;
+  }
+
+  nav {
+    ul {
+      padding: 0;
+      margin-top: 48px;
+      margin-left: 88px;
+      list-style: none;
+
+      li {
+        margin-bottom: 24px;
+
+        a {
+          @include align-center;
+          width: 239px;
+          padding: 8px;
+          border-radius: 8px;
+          text-decoration: none;
+        }
+      }
+
+      .material-symbols-outlined {
+        color: $black-50;
+        margin-right: 18px;
+      }
+
+      .bottom {
+        margin-top: 140px;
+      }
+    }
+
+  }
+
+  nav a:hover {
+    background-color: $green-10;
+  }
+
+  nav a.active {
+    background-color: $green-60;
+  }
+}
+

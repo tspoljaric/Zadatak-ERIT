@@ -1,0 +1,149 @@
+@import '../../styles/variables.scss';
+@import '../../styles.scss';
+
+
+.body {
+  display: flex;
+
+  .main {
+    .nav {
+      @include space-between;
+
+      .wrap-right {
+        @include align-center;
+        gap: 16px;
+
+        .icons {
+          display: flex;
+          gap: 16px;
+
+          .icon-wrapper {
+            @include align-center;
+            position: relative;
+
+            .indicator {
+              width: 12px;
+              height: 12px;
+              top: 0px;
+              right: 0px;
+              position: absolute;
+              background-color: $accent;
+              border-radius: 50%;
+            }
+          }
+        }
+
+        .avatar {
+          @include align-center;
+          gap: 8px;
+
+          img {
+            width: 56px;
+            height: 56px;
+            margin-right: 16px;
+            border-radius: 50%;
+          }
+
+          .wrap-user {
+            @include flex-column;
+          }
+        }
+      }
+    }
+
+    .wrap-main {
+      @include flex-column;
+      margin-top: 40px;
+      gap: 32px;
+
+      .wrap-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 72px;
+
+        .wrap-calculation {
+          @include flex-column;
+          gap: 24px;
+
+          .wrap-title {
+            @include align-center;
+            gap: 16px;
+
+            .icon {
+              @include flex-center;
+              width: 40px;
+              height: 40px;
+              background-color: $green-80;
+              border-radius: 50%;
+
+              span {
+                font-size: 24px;
+                color: $white;
+              }
+            }
+          }
+
+          .form {
+            @include align-center;
+            gap: 24px;
+            mat-form-field {
+              height: fit-content;
+              .mat-mdc-form-field-subscript-wrapper .mat-mdc-form-field-bottom-align {
+                height: 0px !important;
+              }
+            }
+
+            mat-raised-button {
+              width: fit-content;
+              background-color: red;
+            }
+          }
+        }
+
+        .wrap-upload {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+
+      }
+
+      .wrap-hours {
+        @include flex-column;
+
+        .wrap-title {
+          justify-content: space-between;
+
+          .filter {
+            @include flex-center;
+            padding: 8px 16px;
+            background-color: $green-20;
+            border: 1px solid $green-60;
+            border-radius: 8px;
+            gap: 8px;
+
+            span {
+              font-size: 24px;
+            }
+          }
+        }
+
+        table {
+          background-color: $white;
+          gap: 16px;
+
+          th {
+            font-weight: 600;
+            padding: 0px 40px;
+          }
+
+          td {
+            padding: 0px 40px;
+          }
+        }
+      }
+    }
+
+  }
+}
